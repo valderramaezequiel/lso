@@ -101,12 +101,39 @@
       font-size: 0.9rem;
     }
     
+    /* Estilos para videos */
+    .video-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .video-container h5 {
+      margin-bottom: 1rem;
+      color: var(--texto-secundario);
+    }
+    
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .video-wrapper iframe {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    
     /* Responsividad para el header */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+      }
+      
+      .video-wrapper iframe {
+        height: 250px;
       }
     }
   </style>
@@ -162,6 +189,23 @@
       </ul>
 
       <p><strong>Ejemplos:</strong> Ubuntu, Debian, Fedora, FreeBSD.</p>
+
+      <!-- Video de Código Libre -->
+      <div class="video-container">
+        <h5>Video explicativo: ¿Qué es el Software Libre?</h5>
+        <div class="video-wrapper">
+          <iframe 
+            width="100%" 
+            height="400" 
+            src="https://www.youtube.com/embed/5L4DQfVIcdg" 
+            title="Video explicativo sobre Software Libre" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="mt-2"><small>Video educativo sobre los fundamentos del software libre</small></p>
+      </div>
     </div>
 
     <!-- Card: Código Propietario -->
@@ -184,6 +228,23 @@
       </ul>
 
       <p><strong>Ejemplos:</strong> Windows, macOS.</p>
+
+      <!-- Video de Código Propietario -->
+      <div class="video-container">
+        <h5>Video explicativo: Sistemas Operativos Propietarios</h5>
+        <div class="video-wrapper">
+          <iframe 
+            width="100%" 
+            height="400" 
+            src="https://www.youtube.com/embed/AgdUxAwp1_s" 
+            title="Video explicativo sobre Software Propietario" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="mt-2"><small>Comparativa de sistemas operativos propietarios</small></p>
+      </div>
     </div>
   </main>
 
@@ -232,7 +293,4 @@
     showCard(cardDefault);
   </script>
 </body>
-
 </html>
-
-
