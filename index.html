@@ -1,327 +1,330 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Laboratorio de Sistemas Operativos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Paleta basada en el escudo */
-    :root {
-      --violeta: #4b2d91;
-      --azul-oscuro: #1b1f4e;
-      --rojo: #c62828;
-      --texto-claro: #f8f9fc;
-      --texto-secundario: #d5d7f1;
-      --fondo-card: #2a2f6b;
-    }
-
-    body {
-      background: radial-gradient(circle at top, var(--azul-oscuro) 0%, var(--violeta) 100%);
-      color: var(--texto-claro);
-      min-height: 100vh;
-      font-family: "Segoe UI", sans-serif;
-    }
-
-    /* Encabezado mejorado */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1.5rem 1rem 0.5rem;
-      position: relative;
-    }
-
-    header img {
-      width: 70px;
-      height: auto;
-    }
-
-    header h2 {
-      color: var(--rojo);
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    header h5 {
-      color: var(--texto-secundario);
-      margin: 0;
-    }
-
-    /* Barra de botones mejorada */
-    .nav-bar {
-      background-color: rgba(25, 28, 80, 0.85);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    }
-
-    .btn-group .btn {
-      background-color: var(--azul-oscuro);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      color: var(--texto-claro);
-      font-weight: 500;
-      transition: all 0.3s ease;
-      padding: 0.5rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-group .btn:hover {
-      background-color: var(--violeta);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .btn-group .btn.active {
-      background: linear-gradient(90deg, var(--violeta), var(--rojo));
-      border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Tarjetas */
-    .card {
-      background-color: var(--fondo-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      color: var(--texto-claro);
-    }
-
-    h4, h5 {
-      color: var(--rojo);
-    }
-
-    em {
-      color: var(--texto-secundario);
-    }
-
-    footer {
-      color: #d3d4f0;
-      font-size: 0.9rem;
-    }
-    
-    /* Estilos para videos */
-    .video-container {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    
-    .video-container h5 {
-      margin-bottom: 1rem;
-      color: var(--texto-secundario);
-    }
-    
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .video-wrapper iframe {
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
-    
-    /* Responsividad para el header */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-      }
-      
-      .video-wrapper iframe {
-        height: 250px;
-      }
-    }
-  </style>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<title>Laboratorio de Sistemas Operativos</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		/* Paleta basada en el escudo */
+		    :root {
+		      --violeta: #4b2d91;
+		      --azul-oscuro: #1b1f4e;
+		      --rojo: #c62828;
+		      --texto-claro: #f8f9fc;
+		      --texto-secundario: #d5d7f1;
+		      --fondo-card: #2a2f6b;
+		    }
+		
+		    body {
+		      background: radial-gradient(circle at top, var(--azul-oscuro) 0%, var(--violeta) 100%);
+		      color: var(--texto-claro);
+		      min-height: 100vh;
+		      font-family: "Segoe UI", sans-serif;
+		    }
+		
+		    /* Encabezado mejorado */
+		    header {
+		      display: flex;
+		      align-items: center;
+		      justify-content: center;
+		      gap: 1.5rem;
+		      padding: 1.5rem 1rem 0.5rem;
+		      position: relative;
+		    }
+		
+		    header img {
+		      width: 70px;
+		      height: auto;
+		    }
+		
+		    header h2 {
+		      color: var(--rojo);
+		      font-weight: 700;
+		      margin-bottom: 0.3rem;
+		    }
+		
+		    header h5 {
+		      color: var(--texto-secundario);
+		      margin: 0;
+		    }
+		
+		    /* Barra de botones mejorada */
+		    .nav-bar {
+		      background-color: rgba(25, 28, 80, 0.85);
+		      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+		    }
+		
+		    .btn-group .btn {
+		      background-color: var(--azul-oscuro);
+		      border: 2px solid rgba(255, 255, 255, 0.2);
+		      color: var(--texto-claro);
+		      font-weight: 500;
+		      transition: all 0.3s ease;
+		      padding: 0.5rem 1.5rem;
+		      position: relative;
+		      overflow: hidden;
+		    }
+		
+		    .btn-group .btn:hover {
+		      background-color: var(--violeta);
+		      transform: translateY(-2px);
+		      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		    }
+		
+		    .btn-group .btn.active {
+		      background: linear-gradient(90deg, var(--violeta), var(--rojo));
+		      border-color: rgba(255, 255, 255, 0.3);
+		      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		    }
+		
+		    /* Tarjetas */
+		    .card {
+		      background-color: var(--fondo-card);
+		      border: 1px solid rgba(255, 255, 255, 0.08);
+		      border-radius: 12px;
+		      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		      color: var(--texto-claro);
+		    }
+		
+		    h4, h5 {
+		      color: var(--rojo);
+		    }
+		
+		    em {
+		      color: var(--texto-secundario);
+		    }
+		
+		    footer {
+		      color: #d3d4f0;
+		      font-size: 0.9rem;
+		    }
+		    
+		    /* Estilos para videos */
+		    .video-container {
+		      margin: 2rem 0;
+		      text-align: center;
+		    }
+		    
+		    .video-container h5 {
+		      margin-bottom: 1rem;
+		      color: var(--texto-secundario);
+		    }
+		    
+		    .video-wrapper {
+		      position: relative;
+		      width: 100%;
+		      max-width: 800px;
+		      margin: 0 auto;
+		    }
+		    
+		    .video-wrapper iframe {
+		      border-radius: 8px;
+		      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+		    }
+		    
+		    /* Responsividad para el header */
+		    @media (max-width: 768px) {
+		      header {
+		        flex-direction: column;
+		        text-align: center;
+		        gap: 1rem;
+		      }
+		      
+		      .video-wrapper iframe {
+		        height: 250px;
+		      }
+		    }
+		
+	</style>
 </head>
 <body>
 
-  <!-- Encabezado mejorado -->
-  <header class="text-center">
-    <img src="logo.png" alt="Escudo E.E.S.T. N°10">
-    <div>
-      <h2>Laboratorio de Sistemas Operativos</h2>
-      <h5>SO Propietario vs Código Libre</h5>
-    </div>
-  </header>
+	<!-- Encabezado mejorado -->
+	<header class="text-center">
+		<img src="logo.png" alt="Escudo E.E.S.T. N°10">
+		<div>
+			<h2>Laboratorio de Sistemas Operativos</h2>
+			<h5>SO Propietario vs Código Libre</h5>
+		</div>
+	</header>
 
-  <!-- Barra de botones mejorada -->
-  <nav class="nav-bar py-3 mb-4 w-100">
-    <div class="container d-flex justify-content-center">
-      <div class="btn-group" role="group" aria-label="Opciones SO">
-		<button id="btn-reset" type="button" class="btn">Inicio</button>
-        <button id="btn-prop" type="button" class="btn">Código Propietario</button>
-        <button id="btn-libre" type="button" class="btn">Código Libre</button>
-      </div>
-    </div>
-  </nav>
+	<!-- Barra de botones mejorada -->
+	<nav class="nav-bar py-3 mb-4 w-100">
+		<div class="container d-flex justify-content-center">
+			<div class="btn-group" role="group" aria-label="Opciones SO">
+				<button id="btn-reset" type="button" class="btn">Inicio</button>
+				<button id="btn-prop" type="button" class="btn">Código Propietario</button>
+				<button id="btn-libre" type="button" class="btn">Código Libre</button>
+			</div>
+		</div>
+	</nav>
 
-  <!-- Contenido principal -->
-  <main class="container mb-5">
-    <!-- Card por defecto -->
-	 <div id="card-default" class="card p-4 mb-4">
-      <h4 class="mb-2">Seleccioná una opción</h4>
-      <p class="mb-0">Elegí "Código Propietario" o "Código Libre" en la barra superior para ver ventajas y desventajas. También podés usar "Restablecer" para volver al inicio.</p>
-	    <br>
-      <div class="map-container">
-        <h5>Ubicación de la E.E.S.T. N°10</h5>
-        <div class="map-wrapper">
-          <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.582836143076!2d-58.49520332349991!3d-34.690476662086574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcceccee77e3c5%3A0x143c7e1d330742e5!2sEspa%C3%B1a%201050%2C%20B1768%20Villa%20Madero%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1761938388129!5m2!1ses!2sar" 
-          width="50%" 
-          height="400" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-        <div class="location-info">
-          <strong>E.E.S.T. N°10</strong><br>
-          Dirección: España 1050, Villa Madero, Provincia de Buenos Aires<br>
-          Teléfono: (011) 1234-5678
-        </div>
-      </div>
-    </div>  
-	  
-    <!-- Card: Código Libre -->
-    <div id="card-libre" class="card p-4 mb-4" style="display:none;">
-      <h4 class="mb-3">Sistemas Operativos de Código Libre</h4>
-      <p><em>Código abierto, modificable y redistribuible bajo licencias libres.</em></p>
+	<!-- Contenido principal -->
+	<main class="container mb-5">
+		<!-- Card por defecto -->
+		<div id="card-default" class="card p-4 mb-4">
+			<h4 class="mb-2">Seleccioná una opción</h4>
+			<p class="mb-0">Elegí "Código Propietario" o "Código Libre" en la barra superior para ver ventajas y desventajas. También podés usar "Restablecer" para volver al inicio.</p>
+			<br>
+			<div class="map-container">
+				<h5> Acerca del SO Propietario y del Codigo libre</h5>
+				<img src="mano-pc.jpg" alt="relacionado a codigo libre" width="30%" height="150%">
+				<br>
+				<br>
+				<p style="color:white"> <u style="font-size:20px">El software de propietario:</u> es aquel cuyo uso, modificacion y distribucion estan restringidos por el titular de los derechos de autor generalmente pertenece a una empresa o desarrollador que decide no compartir el codigo fuente del software. Los usuarios solo obtienen una licencia para usar el programa bajo ciertas condiciones, sin poder alterar su funcionamiento interno. Este tipo de software suele ser de pago y su desarrollo esta controlado por la empresa creadora, que tambien se encarga de las actualizaciones y el soporte tecnico.Al inicio de la pagina encontraras un apartado acerca de este software mas detallada.</p style "font-size:17px">
+				<br>
+				<p> <u style="font-size:20px"> El codigo libre: </u> este se basa en un tipo de software cuyo codigo fuente esta disponible para que cualquier persona pueda usarlo, estudiarlo, modificarlo y compartirlo libremente. Su obejtivo es garantizar la libertad del usuario, no necesariamente que sea gratis. Este tipo de software promueve la colaboracion, aprendizaje y la transparencia, ya que cualquiera puede mejorarlo o adaptarlo a sus necesidades. Este se distribuye bajo licencias especiales como la GPL, MIT o Apache, que asegura esas libertades. Algunos ejemplos del codiglo libre son Linux, Firefox y libre office.Al inicio de la pagina encontraras un apartado acerca de este software mas detallada. </p style "font-size:17px">
+			</div>
+		</div>
+		</div>
 
-      <h5>Ventajas</h5>
-      <ul>
-        <li>Transparencia total del código; auditables por terceros.</li>
-        <li>Personalización y adaptación a necesidades concretas.</li>
-        <li>Generalmente gratuitos y sin bloqueo por licencias.</li>
-        <li>Comunidad activa que contribuye a mejoras y parches.</li>
-      </ul>
+		<!-- Card: Código Libre -->
+		<div id="card-libre" class="card p-4 mb-4" style="display:none;">
+			<h4 class="mb-3">Sistemas Operativos de Código Libre</h4>
+			<p><em>El software libre es aquel cuyo código fuente está disponible para todos. Permite estudiar, modificar, mejorar y redistribuir el programa sin restricciones, respetando las licencias libres.</em></p>
 
-      <h5>Desventajas</h5>
-      <ul>
-        <li>Puede requerir mayor conocimiento técnico para personalizar y solucionar problemas.</li>
-        <li>Compatibilidad con software o drivers propietarios puede ser limitada.</li>
-        <li>Calidad y soporte varían según la distribución o proveedor.</li>
-      </ul>
+			<h5>Principios del Software Libre</h5>
+			<ul>
+				<li><strong>Libertad 0:</strong> Ejecutar el programa con cualquier propósito.</li>
+				<li><strong>Libertad 1:</strong> Estudiar cómo funciona y adaptarlo a tus necesidades.</li>
+				<li><strong>Libertad 2:</strong> Redistribuir copias del programa.</li>
+				<li><strong>Libertad 3:</strong> Mejorar el programa y compartir tus mejoras.</li>
+			</ul>
 
-      <p><strong>Ejemplos:</strong> Ubuntu, Debian, Fedora, FreeBSD.</p>
+			<h5>Ventajas en profundidad</h5>
+			<ul>
+				<li><strong>Transparencia total:</strong> Al tener acceso al código, cualquier desarrollador puede detectar fallos, mejorar la seguridad o comprobar que no existan puertas traseras.</li>
+				<li><strong>Personalización ilimitada:</strong> Ideal para empresas, escuelas o usuarios avanzados que necesitan un sistema totalmente ajustado a sus necesidades.</li>
+				<li><strong>Independencia del proveedor:</strong> No depende de una sola empresa; si un desarrollador deja de dar soporte, la comunidad puede continuar con el proyecto.</li>
+				<li><strong>Costo reducido:</strong> La mayoría de las distribuciones son gratuitas, lo cual facilita equipar instituciones educativas o laboratorios completos.</li>
+				<li><strong>Mayor seguridad:</strong> Debido al análisis constante de la comunidad, los errores y vulnerabilidades suelen corregirse con rapidez.</li>
+				<li><strong>Comunidad global:</strong> Miles de profesionales y voluntarios aportan parches, guías, documentación y soluciones.</li>
+			</ul>
 
-      <!-- Video de Código Libre -->
-      <div class="video-container">
-        <h5>Video explicativo: ¿Qué es el Software Libre?</h5>
-        <div class="video-wrapper">
-          <iframe 
-            width="100%" 
-            height="480" 
-            src="https://www.youtube.com/embed/fsuroRYmagw?si=qao0G3ihz1zfjTGP" 
-            title="Video explicativo sobre Software Libre" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <p class="mt-2"><small>Video educativo sobre los fundamentos del software libre</small></p>
-      </div>
-    </div>
+			<h5>Desventajas en profundidad</h5>
+			<ul>
+				<li><strong>Curva de aprendizaje:</strong> Algunas distribuciones requieren conocimientos técnicos para su administración, instalación o configuración.</li>
+				<li><strong>Compatibilidad con software comercial:</strong> Algunas aplicaciones (especialmente juegos o programas muy especializados) están diseñadas solo para Windows o macOS.</li>
+				<li><strong>Dependencia de la comunidad:</strong> Aunque existen empresas que dan soporte profesional, muchas distribuciones dependen del tiempo y colaboración voluntaria.</li>
+				<li><strong>Fragmentación:</strong> Existen cientos de distribuciones con diferencias entre sí, lo cual puede dificultar la elección para usuarios principiantes.</li>
+			</ul>
 
-    <!-- Card: Código Propietario -->
-    <div id="card-prop" class="card p-4 mb-4" style="display:none;">
-      <h4 class="mb-3">Sistemas Operativos Propietarios</h4>
-      <p><em>Software con código cerrado, licenciado por empresas proveedoras.</em></p>
+			<h5>Ejemplos destacados</h5>
+			<ul>
+				<li><strong>Ubuntu:</strong> Fácil de usar, ideal para educación y hogares.</li>
+				<li><strong>Debian:</strong> Extremadamente estable; la base de muchas otras distros.</li>
+				<li><strong>Fedora:</strong> Tecnología nueva, ideal para desarrolladores.</li>
+				<li><strong>Arch Linux:</strong> Sistema minimalista y altamente personalizable.</li>
+				<li><strong>FreeBSD:</strong> Enfocado en servidores, seguridad y rendimiento.</li>
+			</ul>
 
-      <h5>Ventajas</h5>
-      <ul>
-        <li>Soporte técnico oficial y documentación centralizada.</li>
-        <li>Compatibilidad con un amplio rango de programas comerciales.</li>
-        <li>Interfaces consistentes y enfocadas en la experiencia del usuario.</li>
-      </ul>
+			<!-- Video -->
+			<div class="video-container">
+				<h5>Video explicativo: ¿Qué es el Software Libre?</h5>
+				<div class="video-wrapper">
+					<iframe width="100%" height="480" src="https://www.youtube.com/embed/fsuroRYmagw?si=MwIBqG9jbm14bQx2" title="Video explicativo sobre Software Libre" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
 
-      <h5>Desventajas</h5>
-      <ul>
-        <li>Dependencia del proveedor y limitaciones en la modificación.</li>
-        <li>Costos de licencia y actualización.</li>
-        <li>Menor transparencia en la seguridad y el manejo de datos.</li>
-      </ul>
 
-      <p><strong>Ejemplos:</strong> Windows, macOS.</p>
+		<!-- Card: Código Propietario -->
+		<div id="card-prop" class="card p-4 mb-4" style="display:none;">
+			<h4 class="mb-3">Sistemas Operativos Propietarios</h4>
+			<p><em>El software propietario es aquel cuyo código fuente es cerrado y está controlado exclusivamente por el desarrollador o empresa responsable. Los usuarios solo acceden a una licencia de uso, no al programa completo.</em></p>
 
-      <!-- Video de Código Propietario -->
-      <div class="video-container">
-        <h5>Video explicativo: Sistemas Operativos Propietarios</h5>
-        <div class="video-wrapper">
-          <iframe 
-            width="100%" 
-            height="480" 
-            src="https://www.youtube.com/embed/OxO-ug2SEvw?si=QsJYZ_W8HI5gpaM8" 
-            title="Video explicativo sobre Software Propietario" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <p class="mt-2"><small>Comparativa de sistemas operativos propietarios</small></p>
-      </div>
-    </div>
-  </main>
+			<h5>Características del Software Propietario</h5>
+			<ul>
+				<li><strong>Código cerrado:</strong> No se puede ver, modificar ni estudiar internamente.</li>
+				<li><strong>Distribución controlada:</strong> La empresa decide cómo se vende, distribuye y actualiza.</li>
+				<li><strong>Licencias de uso:</strong> El usuario no es dueño del software, solo de una licencia para ejecutarlo.</li>
+			</ul>
 
-  <footer class="text-center py-3">
-    Consejo docente: podés usar <kbd>Ctrl</kbd>+<kbd>F</kbd> para buscar términos y <kbd>Ctrl</kbd>+<kbd>P</kbd> para imprimir la página como ficha.
-  </footer>
+			<h5>Ventajas en profundidad</h5>
+			<ul>
+				<li><strong>Soporte técnico profesional:</strong> Las empresas ofrecen asistencia oficial, documentación y actualizaciones garantizadas.</li>
+				<li><strong>Compatibilidad garantizada:</strong> La mayoría de los programas comerciales, videojuegos, drivers y herramientas avanzadas están optimizados para sistemas propietarios.</li>
+				<li><strong>Experiencia de usuario pulida:</strong> Interfaces visualmente coherentes, atractivas y diseñadas para usuarios sin conocimientos técnicos.</li>
+				<li><strong>Estabilidad comercial:</strong> Empresas como Microsoft o Apple garantizan continuidad, parches y soporte a largo plazo.</li>
+			</ul>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const btnProp = document.getElementById('btn-prop');
-    const btnLibre = document.getElementById('btn-libre');
-    const btnReset = document.getElementById('btn-reset');
-    const cardDefault = document.getElementById('card-default');
-    const cardLibre = document.getElementById('card-libre');
-    const cardProp = document.getElementById('card-prop');
-    const allButtons = [btnProp, btnLibre, btnReset];
+			<h5>Desventajas en profundidad</h5>
+			<ul>
+				<li><strong>Falta de libertad de modificación:</strong> El usuario no puede personalizar el sistema más allá de lo permitido.</li>
+				<li><strong>Costo elevado:</strong> Licencias de Windows, suscripciones, apps de pago y actualizaciones pueden ser costosas.</li>
+				<li><strong>Opacidad del código:</strong> No es posible verificar cómo maneja datos personales ni si contiene funciones ocultas.</li>
+				<li><strong>Dependencia del fabricante:</strong> Si la empresa elimina soporte (por ejemplo, Windows 7), el sistema puede quedar vulnerable.</li>
+			</ul>
 
-    function clearActiveButtons() {
-      allButtons.forEach(b => b.classList.remove('active'));
-    }
+			<h5>Ejemplos destacados</h5>
+			<ul>
+				<li><strong>Microsoft Windows:</strong> El SO más utilizado en PC, compatible con la mayor parte del software comercial.</li>
+				<li><strong>macOS:</strong> Sistema exclusivo de Apple, muy optimizado para diseño, video y su hardware propio.</li>
+				<li><strong>iOS y Android (en su capa propietaria):</strong> Aunque Android tiene base libre, la mayoría de capas de fabricantes y servicios de Google son código cerrado.</li>
+			</ul>
 
-    function showCard(cardToShow) {
-      [cardDefault, cardLibre, cardProp].forEach(c => c.style.display = 'none');
-      if (cardToShow) cardToShow.style.display = 'block';
-    }
+			<!-- Video -->
+			<div class="video-container">
+				<h5>Video explicativo: ¿Qué es el Software Libre?</h5>
+				<div class="video-wrapper">
+					<iframe width="100%" height="480" src="https://www.youtube.com/embed/W95gUFgPr1w?si=iRhNibNz85o8s3TO" title="¿Qué es el SOFTWARE LIBRE y en qué consiste? Ventajas y desventajas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        			</iframe>
+				</div>
+				<p class="mt-2"><small>Video educativo sobre los fundamentos del software libre</small></p>
+			</div>
 
-    btnProp.addEventListener('click', () => {
-      clearActiveButtons();
-      btnProp.classList.add('active');
-      showCard(cardProp);
-    });
 
-    btnLibre.addEventListener('click', () => {
-      clearActiveButtons();
-      btnLibre.classList.add('active');
-      showCard(cardLibre);
-    });
 
-    btnReset.addEventListener('click', () => {
-      clearActiveButtons();
-      btnReset.classList.add('active');
-      showCard(cardDefault);
-    });
+		</div>
+		</div>
+	</main>
 
-    showCard(cardDefault);
-  </script>
+	<footer class="text-center py-3">
+		Consejo docente: podés usar <kbd>Ctrl</kbd>+<kbd>F</kbd> para buscar términos y <kbd>Ctrl</kbd>+<kbd>P</kbd> para imprimir la página como ficha.
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		const btnProp = document.getElementById('btn-prop');
+		    const btnLibre = document.getElementById('btn-libre');
+		    const btnReset = document.getElementById('btn-reset');
+		    const cardDefault = document.getElementById('card-default');
+		    const cardLibre = document.getElementById('card-libre');
+		    const cardProp = document.getElementById('card-prop');
+		    const allButtons = [btnProp, btnLibre, btnReset];
+		
+		    function clearActiveButtons() {
+		      allButtons.forEach(b => b.classList.remove('active'));
+		    }
+		
+		    function showCard(cardToShow) {
+		      [cardDefault, cardLibre, cardProp].forEach(c => c.style.display = 'none');
+		      if (cardToShow) cardToShow.style.display = 'block';
+		    }
+		
+		    btnProp.addEventListener('click', () => {
+		      clearActiveButtons();
+		      btnProp.classList.add('active');
+		      showCard(cardProp);
+		    });
+		
+		    btnLibre.addEventListener('click', () => {
+		      clearActiveButtons();
+		      btnLibre.classList.add('active');
+		      showCard(cardLibre);
+		    });
+		
+		    btnReset.addEventListener('click', () => {
+		      clearActiveButtons();
+		      btnReset.classList.add('active');
+		      showCard(cardDefault);
+		    });
+		
+		    showCard(cardDefault);
+		
+	</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
