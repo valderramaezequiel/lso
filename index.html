@@ -8,135 +8,137 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		/* Paleta basada en el escudo */
-		    :root {
-		      --violeta: #4b2d91;
-		      --azul-oscuro: #1b1f4e;
-		      --rojo: #c62828;
-		      --texto-claro: #f8f9fc;
-		      --texto-secundario: #d5d7f1;
-		      --fondo-card: #2a2f6b;
-		    }
-		
-		    body {
-		      background: radial-gradient(circle at top, var(--azul-oscuro) 0%, var(--violeta) 100%);
-		      color: var(--texto-claro);
-		      min-height: 100vh;
-		      font-family: "Segoe UI", sans-serif;
-		    }
-		
-		    /* Encabezado mejorado */
-		    header {
-		      display: flex;
-		      align-items: center;
-		      justify-content: center;
-		      gap: 1.5rem;
-		      padding: 1.5rem 1rem 0.5rem;
-		      position: relative;
-		    }
-		
-		    header img {
-		      width: 70px;
-		      height: auto;
-		    }
-		
-		    header h2 {
-		      color: var(--rojo);
-		      font-weight: 700;
-		      margin-bottom: 0.3rem;
-		    }
-		
-		    header h5 {
-		      color: var(--texto-secundario);
-		      margin: 0;
-		    }
-		
-		    /* Barra de botones mejorada */
-		    .nav-bar {
-		      background-color: rgba(25, 28, 80, 0.85);
-		      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-		    }
-		
-		    .btn-group .btn {
-		      background-color: var(--azul-oscuro);
-		      border: 2px solid rgba(255, 255, 255, 0.2);
-		      color: var(--texto-claro);
-		      font-weight: 500;
-		      transition: all 0.3s ease;
-		      padding: 0.5rem 1.5rem;
-		      position: relative;
-		      overflow: hidden;
-		    }
-		
-		    .btn-group .btn:hover {
-		      background-color: var(--violeta);
-		      transform: translateY(-2px);
-		      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-		    }
-		
-		    .btn-group .btn.active {
-		      background: linear-gradient(90deg, var(--violeta), var(--rojo));
-		      border-color: rgba(255, 255, 255, 0.3);
-		      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-		    }
-		
-		    /* Tarjetas */
-		    .card {
-		      background-color: var(--fondo-card);
-		      border: 1px solid rgba(255, 255, 255, 0.08);
-		      border-radius: 12px;
-		      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-		      color: var(--texto-claro);
-		    }
-		
-		    h4, h5 {
-		      color: var(--rojo);
-		    }
-		
-		    em {
-		      color: var(--texto-secundario);
-		    }
-		
-		    footer {
-		      color: #d3d4f0;
-		      font-size: 0.9rem;
-		    }
-		    
-		    /* Estilos para videos */
-		    .video-container {
-		      margin: 2rem 0;
-		      text-align: center;
-		    }
-		    
-		    .video-container h5 {
-		      margin-bottom: 1rem;
-		      color: var(--texto-secundario);
-		    }
-		    
-		    .video-wrapper {
-		      position: relative;
-		      width: 100%;
-		      max-width: 800px;
-		      margin: 0 auto;
-		    }
-		    
-		    .video-wrapper iframe {
-		      border-radius: 8px;
-		      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-		    }
-		    
-		    /* Responsividad para el header */
-		    @media (max-width: 768px) {
-		      header {
-		        flex-direction: column;
-		        text-align: center;
-		        gap: 1rem;
-		      }
-		      
-		      .video-wrapper iframe {
-		        height: 250px;
-		      }
-		    }
-		
+    :root {
+      --violeta: #4b2d91;
+      --azul-oscuro: #1b1f4e;
+      --rojo: #c62828;
+      --texto-claro: #f8f9fc;
+      --texto-secundario: #d5d7f1;
+      --fondo-card: #2a2f6b;
+    }
+
+    body {
+      background: radial-gradient(circle at top, var(--azul-oscuro) 0%, var(--violeta) 100%);
+      color: var(--texto-claro);
+      min-height: 100vh;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Encabezado mejorado */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1.5rem 1rem 0.5rem;
+      position: relative;
+    }
+
+    header img {
+      width: 70px;
+      height: auto;
+    }
+
+    header h2 {
+      color: var(--rojo);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    header h5 {
+      color: var(--texto-secundario);
+      margin: 0;
+    }
+
+    /* Barra de botones mejorada */
+    .nav-bar {
+      background-color: rgba(25, 28, 80, 0.85);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-group .btn {
+      background-color: var(--azul-oscuro);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: var(--texto-claro);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-group .btn:hover {
+      background-color: var(--violeta);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-group .btn.active {
+      background: linear-gradient(90deg, var(--violeta), var(--rojo));
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Tarjetas */
+    .card {
+      background-color: var(--fondo-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      color: var(--texto-claro);
+    }
+
+    h4, h5 {
+      color: var(--rojo);
+    }
+
+    em {
+      color: var(--texto-secundario);
+    }
+
+    footer {
+      color: #d3d4f0;
+      font-size: 0.9rem;
+    }
+    
+    /* Estilos para videos */
+    .video-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .video-container h5 {
+      margin-bottom: 1rem;
+      color: var(--texto-secundario);
+    }
+    
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .video-wrapper iframe {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Responsividad para el header */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .video-wrapper iframe {
+        height: 250px;
+      }
+    }
+	img {
+      border-radius: 12px;
+    }
 	</style>
 </head>
 <body>
@@ -171,13 +173,13 @@
         
         <div class="row justify-content-center ">
           <div class="col">
-            <img src="mano-pc.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="mano-pc.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
           <div class="col">
-            <img src="manos-cod-pc.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="manos-cod-pc.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
           <div class="col">
-            <img src="libre-vs-propietario.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="libre-vs-propietario.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
         </div>
 
@@ -197,13 +199,13 @@
       <p><em>El software libre es aquel cuyo código fuente está disponible para todos. Permite estudiar, modificar, mejorar y redistribuir el programa sin restricciones, respetando las licencias libres.</em></p>
       <div class="row justify-content-center pt-3 pb-5">
           <div class="col">
-            <img src="libre-1.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="libre-1.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
           <div class="col">
-            <img src="libre-2.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="libre-2.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
           <div class="col">
-            <img src="libre-3.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="libre-3.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
       </div>
 
@@ -259,13 +261,13 @@
 
       <div class="row justify-content-center pt-3 pb-5">
           <div class="col">
-            <img src="propietario-1.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="propietario-1.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
           <div class="col">
-            <img src="propietario-2.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="propietario-2.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
           <div class="col">
-            <img src="propietario-3.jpg" alt="relacionado a codigo libre" width="90%" height="100%" style="border-radius: 12px;">
+            <img src="propietario-3.jpg" alt="relacionado a codigo libre" width="90%" height="100%" >
           </div>
       </div>
 
